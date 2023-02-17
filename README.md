@@ -15,3 +15,5 @@
 2023.02.13 13일차 JavaScrpit Jquery<br>
 2023.02.14 14일차 Java시작<br>
 2023.02.15 15일차 Java 기본타입 변수와 Scanner<br>
+2023.02.16 16일차 Java 연산자1<br>
+2023.02.17 17일차 Java 연산자2<br>
