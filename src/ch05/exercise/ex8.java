@@ -26,5 +26,4 @@ public class ex8 {
 		System.out.println("전체 합: " + totalSum);
 		System.out.println("평균: " + avg);
 	}
-
 }
