@@ -1,6 +1,6 @@
 package ch05.lecture.p08regex;
 
-public class C16Regex {
+public class C16RegEx {
 	public static void main(String[] args) {
 		//0개 또는 1개 {0,1}
 		// ?  : 0개 또는 1개

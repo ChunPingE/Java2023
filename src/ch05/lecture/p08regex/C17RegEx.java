@@ -1,6 +1,6 @@
 package ch05.lecture.p08regex;
 
-public class C17Regex {
+public class C17RegEx {
 	public static void main(String[] args) {
 		// 영문대소문자, $ , _, 숫자
 		//단 숫자가 앞에 오면 안됨

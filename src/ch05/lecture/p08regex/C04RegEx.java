@@ -1,6 +1,6 @@
 package ch05.lecture.p08regex;
 
-public class C04Regex {
+public class C04RegEx {
 	public static void main(String[] args) {
 		System.out.println("ab".matches("ab")); //true
 		System.out.println("bc".matches("bc")); //true

@@ -1,6 +1,6 @@
 package ch05.lecture.p08regex;
 
-public class C21Regex {
+public class C21RegEx {
 	public static void main(String[] args) {
 		//word character
 		// \w

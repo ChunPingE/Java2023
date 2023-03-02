@@ -1,6 +1,6 @@
 package ch05.lecture.p08regex;
 
-public class C10Regex {
+public class C10RegEx {
 	public static void main(String[] args) {
 		//quantifier (수량자)
 		

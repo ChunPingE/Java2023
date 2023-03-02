@@ -1,6 +1,6 @@
 package ch05.lecture.p08regex;
 
-public class C19Regex {
+public class C19RegEx {
 	public static void main(String[] args) {
 		// 빈칸
 		// \s

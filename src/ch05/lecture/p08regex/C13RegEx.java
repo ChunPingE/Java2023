@@ -1,6 +1,6 @@
 package ch05.lecture.p08regex;
 
-public class C13Regex {
+public class C13RegEx {
 	public static void main(String[] args) {
 		//n개 이상 : {n,}
 		

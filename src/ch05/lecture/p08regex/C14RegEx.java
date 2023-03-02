@@ -1,6 +1,6 @@
 package ch05.lecture.p08regex;
 
-public class C14Regex {
+public class C14RegEx {
 	public static void main(String[] args) {
 		//1개이상 {1, }
 		// +

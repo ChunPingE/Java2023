@@ -1,6 +1,6 @@
 package ch05.lecture.p08regex;
 
-public class C12Regex {
+public class C12RegEx {
 	public static void main(String[] args) {
 		//수량 3~7 : {3~7}
 		

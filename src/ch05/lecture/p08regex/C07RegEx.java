@@ -1,6 +1,6 @@
 package ch05.lecture.p08regex;
 
-public class C07Regex {
+public class C07RegEx {
 	public static void main(String[] args) {
 		//대소문자 한번에 표현
 		System.out.println("a".matches("[a-zA-Z]")); //true

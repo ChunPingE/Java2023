@@ -1,6 +1,6 @@
 package ch05.lecture.p08regex;
 
-public class C09Regex {
+public class C09RegEx {
 	public static void main(String[] args) {
 		//character class
 		//negation(not)

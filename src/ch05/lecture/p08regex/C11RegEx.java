@@ -1,6 +1,6 @@
 package ch05.lecture.p08regex;
 
-public class C11Regex {
+public class C11RegEx {
 	public static void main(String[] args) {
 		//010으로 시작 - 기호, 숫자4자리,-기호 숫자4자리
 		

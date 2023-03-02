@@ -1,6 +1,6 @@
 package ch05.lecture.p08regex;
 
-public class C05Regex {
+public class C05RegEx {
 	public static void main(String[] args) {
 		//character class
 		

@@ -1,6 +1,6 @@
 package ch05.lecture.p08regex;
 
-public class C15Regex {
+public class C15RegEx {
 	public static void main(String[] args) {
 		//0개이상 {0, }
 		// *  : 0개이상
