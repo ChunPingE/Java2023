@@ -3,16 +3,17 @@ package ch09.lecture.p02anonymous;
 public class C03Anonymous {
 	public static void main(String[] args) {
 		//상속과 인스턴스 생성 동시
-		//MyClass02 o1 = new MyClass02() {};
-		MyClass02 o1 = new MyClass02() {
-			//클래스 구현
-			
+		MyClass03 o1 = new MyClass03() {
+			@Override
+			void method1() {
+				System.out.println("재정의한 메소드");
+			}
 		};
-		
+		o1.method1();
 	}
-
 }
 
 abstract class MyClass03 {
+	abstract void method1();
 }
 
