@@ -7,7 +7,7 @@ import java.util.Scanner;
 import ch06.exercise.exam20_2.Account;
 
 public class BankApplication {
-	private static List<Account> list = new ArrayList<>();
+	private static List<Account> accountList = new ArrayList<>();
 
 	public static void main(String[] args) {
 
@@ -56,6 +56,10 @@ public class BankApplication {
 
 		System.out.print("계좌번호: ");
 		String ano = sc.nextLine();
+		if(!ano.matches("\\d{3}-\\d{3}")) {
+			System.out.println("계좌번호는 000-000형식입니다.");
+			return;
+		}
 
 		System.out.print("계좌주: ");
 		String owner = sc.nextLine();
@@ -64,7 +68,7 @@ public class BankApplication {
 		int balance = Integer.parseInt(sc.nextLine());
 
 		Account newAccount = new Account(ano, owner, balance);
-		list.add(newAccount);
+		accountList.add(newAccount);
 		System.out.println("결과: 계좌가 생성되었습니다.");
 	}
 
@@ -73,14 +77,12 @@ public class BankApplication {
 		System.out.println("계좌목록");
 		System.out.println("--------");
 
-		for (int i = 0; i < list.size(); i++) {
-			Account account = list.get(i);
-			if (account != null) {
-				String ano = account.getAno();
-				String owner = account.getOwner();
-				int balance = account.getBalance();
-				System.out.printf("%s     %s     %d\n", ano, owner, balance);
-			}
+		for (int i = 0; i < accountList.size(); i++) {
+			Account account = accountList.get(i);
+			String ano = account.getAno();
+			String owner = account.getOwner();
+			int balance = account.getBalance();
+			System.out.printf("%s     %s     %d\n", ano, owner, balance);
 		}
 	}
 
@@ -91,17 +93,20 @@ public class BankApplication {
 		System.out.println("--------");
 		System.out.print("계좌번호: ");
 		String ano = sc.nextLine();
-		System.out.print("예금액: ");
-		int balance = Integer.parseInt(sc.nextLine());
 
 		// 입력된 계좌번호를 가진 Account 객체 찾아서
-		for (int i = 0; i < list.size(); i++) {
-			Account cur = list.get(i);
+		for (int i = 0; i < accountList.size(); i++) {
+			Account cur = accountList.get(i);
 
 			if (cur.getAno().equals(ano)) {
+				System.out.print("예금액: ");
+				int balance = Integer.parseInt(sc.nextLine());
 				// 입력 받은 금액을 더해서 다시 넣어준다(set)
 				int money = cur.getBalance() + balance;
 				cur.setBalance(money);
+				System.out.println("예금이 성공했습니다.");
+			} else {
+				System.out.println("계좌가 존재하지 않습니다.");
 			}
 		}
 	}
@@ -113,14 +118,14 @@ public class BankApplication {
 		System.out.println("--------");
 		System.out.print("계좌번호: ");
 		String ano = sc.nextLine();
-		System.out.print("출금액: ");
-		int money = Integer.parseInt(sc.nextLine());
 
 		// 입력된 계좌번호를 가진 Account 객체 찾아서
-		for (int i = 0; i < list.size(); i++) {
-			Account cur = list.get(i);
+		for (int i = 0; i < accountList.size(); i++) {
+			Account cur = accountList.get(i);
 
 			if (cur.getAno().equals(ano)) {
+				System.out.print("출금액: ");
+				int money = Integer.parseInt(sc.nextLine());
 				if (cur.getBalance() < money) {
 					System.out.println("잔액이 부족합니다.");
 					return;
@@ -128,7 +133,10 @@ public class BankApplication {
 					// 입력 받은 금액을 빼고 돌려주기(set)
 					int balance = cur.getBalance() - money;
 					cur.setBalance(balance);
+					System.out.println("츌금이 성공했습니다.");
 				}
+			} else {
+				System.out.println("계좌가 존재하지 않습니다.");
 			}
 		}
 	}
