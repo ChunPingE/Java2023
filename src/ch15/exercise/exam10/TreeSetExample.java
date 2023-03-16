@@ -10,7 +10,7 @@ public class TreeSetExample {
 		treeSet.add(new Student("white", 92));
 
 		Student student = treeSet.last();
-		System.out.println("최고점수: " + student.score); //96
+		System.out.println("최고점수: " + student.score); // 96
 		System.out.println("최고점수를 받은 아이디: " + student.id); // blue
 	}
 }
